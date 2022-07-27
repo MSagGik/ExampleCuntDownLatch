@@ -18,7 +18,6 @@ public class ExampleCuntDownLatch {
             Thread.sleep(1000);
             countDownLatch.countDown();
         }
-
     }
 }
 class Processor implements Runnable {
@@ -29,7 +28,6 @@ class Processor implements Runnable {
         this.id = id;
         this.countDownLatch = countDownLatch;
     }
-
     @Override
     public void run() {
         try {
@@ -44,6 +42,5 @@ class Processor implements Runnable {
             e.printStackTrace();
         }
         System.out.println("Thread with id " + id + " proceeded.");
-
     }
 }
